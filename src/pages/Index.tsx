@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../App.css';
@@ -92,7 +91,7 @@ function Index() {
 
   return (
     <div className="container">
-      <img src="/logo.jpg" alt="Logo" className="logo" />
+      <img src="/image.png" alt="Logo" className="logo" />
 
       <div className="search-section">
         <div className="tagline">Smarter search. Better results. Faster decisions.</div>
