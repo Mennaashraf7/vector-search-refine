@@ -329,6 +329,124 @@ body {
   font-weight: 500;
 }
 
+/* Dark mode styles */
+.dark body {
+  background-color: #1a1a1a;
+  color: #e5e5e5;
+}
+
+.dark .container {
+  background-color: #1a1a1a;
+}
+
+.dark .tagline {
+  color: #60a5fa;
+}
+
+.dark .keyword-box input {
+  background-color: #2d3748;
+  border-color: #4a5568;
+  color: #e5e5e5;
+}
+
+.dark .keyword-box input::placeholder {
+  color: #a0aec0;
+}
+
+.dark .search-box {
+  border-color: #4a5568;
+}
+
+.dark .search-box input {
+  background-color: #2d3748;
+  color: #e5e5e5;
+}
+
+.dark .search-box .icon {
+  color: #60a5fa;
+}
+
+.dark .date-filter-toggle {
+  color: #60a5fa;
+}
+
+.dark .date-filter-toggle:hover {
+  background-color: #2d3748;
+}
+
+.dark .search-box button {
+  background-color: #4a5568;
+}
+
+.dark .search-box button:hover {
+  background-color: #2d3748;
+}
+
+.dark .date-filter {
+  background-color: #2d3748;
+  border-color: #4a5568;
+}
+
+.dark .date-input-group label {
+  color: #60a5fa;
+}
+
+.dark .date-input-group input {
+  background-color: #1a202c;
+  border-color: #4a5568;
+  color: #e5e5e5;
+}
+
+.dark .date-input-group input:focus {
+  border-color: #60a5fa;
+}
+
+.dark .error {
+  background-color: #742a2a;
+  color: #fed7d7;
+}
+
+.dark .results-container {
+  background-color: #2d3748;
+}
+
+.dark .results-title {
+  color: #60a5fa;
+  border-bottom-color: #4a5568;
+}
+
+.dark .result-card {
+  background-color: #1a202c;
+  border-color: #4a5568;
+}
+
+.dark .result-card:hover {
+  border-color: #60a5fa;
+}
+
+.dark .result-header {
+  color: #60a5fa;
+}
+
+.dark .result-content {
+  color: #cbd5e0;
+}
+
+.dark .result-link {
+  color: #60a5fa;
+  border-color: #60a5fa;
+}
+
+.dark .result-link:hover {
+  background-color: #60a5fa;
+  color: #1a202c;
+}
+
+.dark .result-score {
+  background-color: #4a5568;
+  color: #cbd5e0;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .results-section {

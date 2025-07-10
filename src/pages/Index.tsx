@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
 import { FaSearch, FaCalendarAlt } from 'react-icons/fa';
+import DarkModeToggle from '../components/DarkModeToggle';
 
 interface SearchResult {
   id: number;
@@ -32,6 +33,29 @@ function Index() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+
+  // Initialize dark mode from localStorage
+  useEffect(() => {
+    const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+    setDarkMode(savedDarkMode);
+    if (savedDarkMode) {
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  // Toggle dark mode
+  const toggleDarkMode = () => {
+    const newDarkMode = !darkMode;
+    setDarkMode(newDarkMode);
+    localStorage.setItem('darkMode', newDarkMode.toString());
+    
+    if (newDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  };
 
   const handleSearch = async () => {
     if (!query.trim() && !keywords.trim()) return;
@@ -94,7 +118,7 @@ function Index() {
       <img src="/image.png" alt="Logo" className="logo" />
 
       <div className="search-section">
-        <div className="tagline">Smarter search. Better results. Faster decisions.</div>
+        <div className="tagline" style={{ marginTop: '10px' }}>Smarter search. Better results. Faster decisions.</div>
 
         <div className="search-group">
           <div className="keyword-box">
@@ -189,6 +213,8 @@ function Index() {
       <div className="rectangle-top"></div>
       <div className="triangle-right"></div>
       <div className="rectangle-bottom"></div>
+
+      <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} />
     </div>
   );
 }
