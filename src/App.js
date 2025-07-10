@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="container">
-      <img src="/logo.jpg" alt="Logo" className="logo" />
+      <img src="/logo.png" alt="Logo" className="logo" />
 
     
     <div className="search-section">
