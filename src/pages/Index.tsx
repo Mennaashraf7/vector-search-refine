@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../App.css';
@@ -118,7 +119,7 @@ function Index() {
       <img src="/image.png" alt="Logo" className="logo" />
 
       <div className="search-section">
-        <div className="tagline" style={{ marginTop: '10px' }}>Smarter search. Better results. Faster decisions.</div>
+        <div className="tagline">Smarter search. Better results. Faster decisions.</div>
 
         <div className="search-group">
           <div className="keyword-box">
@@ -209,10 +210,10 @@ function Index() {
         )}
       </div>
 
-      {/* Sigma shape */}
-      <div className="rectangle-top"></div>
-      <div className="triangle-right"></div>
-      <div className="rectangle-bottom"></div>
+      {/* Premium geometric elements replacing Sigma shapes */}
+      <div className="geometric-accent-1"></div>
+      <div className="geometric-accent-2"></div>
+      <div className="geometric-accent-3"></div>
 
       <DarkModeToggle darkMode={darkMode} onToggle={toggleDarkMode} />
     </div>
